@@ -1,0 +1,38 @@
+<div>
+    <head>
+        <title>
+            OpenAI Quickstart
+        </title>
+    </head>
+
+    <main className="main">
+        <h3>Content Moderator</h3>
+        <form>
+            <input type="text" name="Text" placeholder="Enter text to scan" [(ngModel)]="input"/>
+            <input type="button" value="Analyze" (click)="postCompletion()"/>
+        </form>
+        <div className=result>
+            {{result}}
+<!--             <table>
+                <th>
+                    <tr>Hate</tr>
+                    <tr>Hate/Threatening</tr>
+                    <tr>Self-Harm</tr>
+                    <tr>Sexual</tr>
+                    <tr>sexual/minors</tr>
+                    <tr>violence</tr>
+                    <tr>violence/graphic</tr>
+                </th>
+                <th>
+                    <tr>{{hate}}</tr>
+                    <tr>{{threat}}</tr>
+                    <tr>{{selfh}}</tr>
+                    <tr>{{sexual}}</tr>
+                    <tr>{{minors}}</tr>
+                    <tr>{{violence}}</tr>
+                    <tr>{{graphic}}</tr>
+                </th>
+            </table> -->
+        </div>
+    </main>
+</div>

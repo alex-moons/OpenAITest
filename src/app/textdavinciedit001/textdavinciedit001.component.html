@@ -1,0 +1,21 @@
+<div>
+    <head>
+        <title>
+            OpenAI Quickstart
+        </title>
+    </head>
+
+    <main className="main">
+        <h3>Text editing</h3>
+        <form>
+            <input type="text" name="inputText" placeholder="Enter text" [(ngModel)]="inputText"/>
+            <br>
+            <input type="text" name="instruction" placeholder="What would you like to edit?" [(ngModel)]="instruction"/>
+            <br>
+            <input type="button" value="Correct Text" (click)="postCompletion()"/>
+        </form>
+        <div className=result>
+            {{result}}
+        </div>
+    </main>
+</div>
