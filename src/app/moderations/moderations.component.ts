@@ -24,8 +24,11 @@ export class ModerationsComponent implements OnInit{
 
     this.moderation.postCompletion(payload).subscribe((data:any)=>{
       console.log(data);
-
-      this.result = data.results[0].flagged;
+      if (data.results[0].flagged){
+        this.result = "The message is offensive."
+      }else{
+        this.result = "The message is alright."
+      }
     });
 
   }
