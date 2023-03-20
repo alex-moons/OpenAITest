@@ -15,7 +15,7 @@ export class ModerationService {
   httpOptions={
     headers: new HttpHeaders({
       'Content-Type' : 'application/json',
-      'Authorization' : 'Bearer <key-here',
+      'Authorization' : 'Bearer ' + process.env['NG_APP_KEY'],
     })
   }
   postCompletion(payload:any) : Observable<any> {
